@@ -42,13 +42,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     listItem.addEventListener("click", function (e) {
 
-        if (e.target.classList.contains("tasktext")) {
-            e.target.closest("li").classList.toggle("checked");
-        }
-        else if (e.target.classList.contains("delete")) {
-            e.target.closest("li").remove();
+    
+         const li =e.target.closest("li");
+         if(!li) return;
+          
+         if(e.target.classList.contains("delete")){
+            li.remove();
             return;
-        }
+         }
+         li.classList.toggle("checked");
+
+
+
+        
     })
 })
 

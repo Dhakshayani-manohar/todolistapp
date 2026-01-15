@@ -9,12 +9,11 @@
 .to-do-list {
     width: 100%;
     min-height: 100dvh;
-    background: linear-gradient(135deg, #192e56, #19a4ae);
+    background:#101114;
     padding: 15px;
 }
 
 .container {
-    background-color: #fff;
     width: 100%;
     max-width: 600px;
     margin: 100px auto 20px;
@@ -32,12 +31,15 @@
     font-weight: bold;
     gap: 10px;
 }
+.app-container h1{
+    color:#00FFC4;
+}
 
 .row {
     display: flex;
     align-items: center;
     background: darkgray;
-    border-radius: 30px;
+    border-radius:18px;
     margin-bottom: 20px;
     padding-left:10px;
     
@@ -51,25 +53,31 @@
 .form-control {
     flex: 1;
     border: none;
-    outline: none;
-    background: transparent;
+    background:none;
     font-size: 20px;
-    border-radius: 18px;
-    box-shadow: none;
+    border-radius:15px;
+    caret-color:#010b09 ;
+    color:#F9F9F9;
     resize: none;
-    line-height: 1.4;
     overflow-wrap: break-word;
+    
 }
-
+.form-control:focus{
+      outline: none;
+      border: none;
+      background-color: none;
+      box-shadow: none;
+      background: none;
+}
 
 
 .btn {
     padding: 16px 50px;
     width: auto;
     font-size: 16px;
-    background: #ff5945;
-    color: #fff;
-    border-radius: 30px;
+    background-color:#00FFC4;
+    color: #101114;
+    border-radius:18px;
     border: none;
     outline: none;
     cursor: pointer;
@@ -83,7 +91,8 @@
 }
 
 ul {
-    padding-left: 0;
+    margin:auto;
+    padding-left:0 ;
 }
 
 ul li {
@@ -96,9 +105,11 @@ ul li {
     position: relative;
     user-select: none;
     padding: 12px 12px 12px 50px;
-    margin-top: 15px;
-    margin-left: 15px;
+    margin-top: 25px;
+    margin-left: 10px;
     overflow: hidden;
+    background-color: #1C1D20;
+    border-radius: 20px;
 
 }
 
@@ -114,21 +125,29 @@ ul li::before {
     top: 28px;
     left: 10px;
     transform: translateY(-50%);
+    background-color: #1C1D20;
+    border-radius: 20px;
+
 }
 .tasktext{
     flex:1;
     word-break: break-word;
     overflow-wrap: anywhere;
     white-space:normal ;
+    color:#F9F9F9;
+
+
 }
 
 .checked .tasktext{
-    color: #0c0302;
+    color:#F9F9F9;;
     text-decoration: line-through;
+    transition: 200ms ease;
 }
 
 ul li.checked::before {
     background-image: url(img/circle.png);
+    transition: 200ms ease;
 }
 
  .delete {
@@ -136,11 +155,12 @@ ul li.checked::before {
   font-size: 18px;
   width:30px;
   height:30px;
-  color: #0b0808;
+  color: #F9F9F9;
   
 
 }
 .delete:hover {
-  transform: scale(1.5);
+  color: #ff0033;  
+  transition: 200ms ease;
   
 }
